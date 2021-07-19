@@ -18,8 +18,10 @@ class BasePage:
     def __init__(self,driver: WebDriver = None):
         if driver is None:
             option = Options()
-            option.debugger_address = '127.0.0.1:9222'
-            self._driver = webdriver.Chrome()
+            # option.debugger_address = '127.0.0.1:9222'
+            # self._driver = webdriver.Chrome(options=option)
+            option.add_argument('--headless')
+            self._driver = webdriver.Chrome(chrome_options=option)
             print(1)
         else:
             self._driver = driver
@@ -68,7 +70,7 @@ class BasePage:
 
     def move_to_gap2(self,slider):  # slider是要移动的滑块,tracks是要传入的移动轨迹
         ActionChains(self._driver).click_and_hold(slider).perform()
-        ActionChains(self._driver).move_by_offset(xoffset=200, yoffset=0).perform()
+        ActionChains(self._driver).move_by_offset(xoffset=240, yoffset=0).perform()
         time.sleep(0.5)
         ActionChains(self._driver).release().perform()
 
