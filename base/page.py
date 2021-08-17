@@ -20,9 +20,9 @@ class BasePage:
             option = Options()
             # option.debugger_address = '127.0.0.1:9222'
             # self._driver = webdriver.Chrome(options=option)
-            option.add_argument('--headless')
-            self._driver = webdriver.Chrome(chrome_options=option)
-            print(1)
+            # option.add_argument('--headless')
+            # self._driver = webdriver.Chrome(chrome_options=option)
+            self._driver = webdriver.Chrome()
         else:
             self._driver = driver
         if self._page_url != "":

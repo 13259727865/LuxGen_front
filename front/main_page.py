@@ -9,10 +9,10 @@ from base.page import BasePage
 from front.login import Login
 
 
-class AdminPage(BasePage):
+class MainPage(BasePage):
     _page_url = "http://test.simulation.luxcreo.cn/#/index"
     def go_login(self):
-        self.find(By.CLASS_NAME,"login").click()
+        self.find(By.CLASS_NAME,"login_btn").click()
         return Login(self._driver)
 
 
