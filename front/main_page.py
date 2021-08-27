@@ -6,13 +6,16 @@
 from selenium.webdriver.common.by import By
 
 from base.page import BasePage
+from base.page_file import File
 from front.login import Login
 
 
 class MainPage(BasePage):
-    _page_url = "http://test.simulation.luxcreo.cn/#/index"
+    # _page_url = "http://test.simulation.luxcreo.cn/#/index"
+    _page_url = File().read_yaml(path="../config/url.yaml")["url"]
     def go_login(self):
-        self.find(By.CLASS_NAME,"login_btn").click()
+        # self.find("class name","login_btn").click()
+        self.parse_action("../yaml/main.yaml","go_login")
         return Login(self._driver)
 
 

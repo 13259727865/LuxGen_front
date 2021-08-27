@@ -1,0 +1,8 @@
+go_login:
+  - by: class name
+    locator: login_btn
+    action: find_click
+go_login2:
+  - by: class
+    locator: login_btn
+    action: find_click

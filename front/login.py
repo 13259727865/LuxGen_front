@@ -19,7 +19,6 @@ class Login(BasePage):
         self.move_to_gap2(huakuai)
         self.find(By.CLASS_NAME,"el-input-group__append").click()
         sleep(3)
-        print("没有什么")
         self.find(By.XPATH, "//*[@id='app']/div/div[2]/div/form/div[1]/div[3]/div/div[1]/input").send_keys(1234)
         self.find(By.XPATH,"//*[@class='btn-box'][1]").click()
         # return LoginMain(self._driver)

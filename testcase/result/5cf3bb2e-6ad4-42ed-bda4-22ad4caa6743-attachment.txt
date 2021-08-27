@@ -1,0 +1,3 @@
+[32mINFO    [0m base.log_config:page_file.py:18 read../yaml/main.yaml
+[32mINFO    [0m base.log_config:page_file.py:21 return {'go_login': [{'by': 'class name', 'locator': 'login_btn', 'action': 'find_click'}], 'go_login2': [{'by': 'class', 'locator': 'login_btn', 'action': 'find_click'}]}
+[32mINFO    [0m base.log_config:page.py:118 action:find_click,by:class name,locator:login_btn
